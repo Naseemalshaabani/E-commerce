@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, intial-scale-1.0"> 
+        <title>Ecommerce</title>
+        <!--css link-->
+        <link rel="stylesheet" href="css/style.css">
+        
+       
+    </head>
+    <body>
+        <header>
+            
+            <nav>
+                <a href="#" class="logo">E-commerce </a>
+                <div class="main-header">
+                    <ul class="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="categories">
+            <h2>Our Products</h2>
+            <!-- <p>Function handbag made of luxurous materials to improve people's lives in small but maight ways.</p> -->
+            <!--category btn-->
+            <!-- <div class="category-btn">
+                <div class="buttons">
+                    <button class="button-value" onclick="filterProduct('all')" >All</button>
+                    <button class="button-value" onclick="filterProduct('Clothes')">Clothes</button>
+                    <button class="button-value" onclick="filterProduct('Watches')">Watches</button>
+                    <button class="button-value" onclick="filterProduct('Shoes')">Shoes</button>
+                    <button class="button-value" onclick="filterProduct('Bags')">Bags</button>
+                </div> -->
+                <div id="search-container">
+                    <input type="search"id="searchInput" placeholder="search product here">
+                    <button onclick="searchProducts()">Search</button>
+                </div>
+            </div>
+            
+            <!--product card-->
+            <div id="products">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/24.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Clothes" data-price="$ 70">
+                            <h5 class="product-name">Clothes</h5>
+                            <h6 class="price">$ 70</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/22.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Clothes" data-price="$ 30">
+                            <h5 class="product-name">Clothes</h5>
+                            <h6 class="price">$ 30</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/20.webp" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Shoes" data-price="$ 50">
+                            <h5 class="product-name">Shoes</h5>
+                            <h6 class="price">$ 50</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/19.webp" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Watches" data-price="$ 60">
+                            <h5 class="product-name">Watches</h5>
+                            <h6 class="price">$ 60</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/17.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Clothes" data-price="$ 80">
+                            <h5 class="product-name">Clothes</h5>
+                            <h6 class="price">$ 80</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/16.webp" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Bages" data-price="$ 90">
+                            <h5 class="product-name">Bages</h5>
+                            <h6 class="price">$ 90</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/15.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Watches" data-price="$ 60">
+                            <h5 class="product-name">Watches</h5>
+                            <h6 class="price">$ 60</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/14.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div class="product" data-name=" Bages" data-price="$ 75">
+                            <h5 class="product-name">Bags</h5>
+                            <h6 class="price">$ 75</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/13.webp" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Watches</h5>
+                            <h6 class="price">$ 85</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>   
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/12.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Clothes</h5>
+                            <h6 class="price">$ 70</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/11.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Watches</h5>
+                            <h6 class="price">$ 40</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/7.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Shoes</h5>
+                            <h6 class="price">$ 20</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>   
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/6.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Shoes</h5>
+                            <h6 class="price">$ 30</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/4.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Bages</h5>
+                            <h6 class="price">$ 70</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>   
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/2.jpeg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Bags</h5>
+                            <h6 class="price">$ 90</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/1.jpg" alt="">
+                    </div>
+                    
+                    <div class="container">
+                        <div>
+                            <h5 class="product-name">Shoes</h5>
+                            <h6 class="price">$ 50</h6>
+                        </div>
+                        <button onclick="addToCart('product-name','price')" class="cart-btn">Add To Cart</button>
+                    </div>   
+                </div>
+        </section>
+
+        <!--start footer-->
+		<div class ="footer">
+            <span style="font-family:'Lucida Calligraphy';font-size:20px;">Copyright &copy Naseem Ali</span><br><br>		 
+            <a href="https://www.facebook.com/SkyLight.Shopping" target="blank"> <img src="images/1.png" class="social" width="40" height="40"></a> 
+            <a href="tel:87566679" target="blank"><img src="images/7.png" width="40" height="40"></a>
+            <a href="http://www.email.com" target="blank"><img src="images/2.png" width="40" height="40"></a></div>
+    </footer>
+<!--end footer-->
+
+        <!-- script tags -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
